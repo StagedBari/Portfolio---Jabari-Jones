@@ -6,206 +6,85 @@
     <title>Jabari Jones | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f7fa;
-            color: #333;
-            font-size: 18px;
-        }
-
-        h1, h2, h3 {
-            font-size: 28px;
-            color: #2c3e50;
-            margin-bottom: 15px;
-        }
-
-        /* Styling for the navigation bar */
-        header {
-            background-color: #2c3e50;
-            color: #fff;
-            padding: 15px 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style-type: none;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
+            background-color: #f4f4f4;
         }
-
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
         nav ul li {
+            display: inline;
             margin: 0 15px;
         }
-
         nav ul li a {
-            color: #fff;
+            color: white;
             text-decoration: none;
-            font-size: 20px;
-            padding: 5px 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            font-weight: bold;
         }
-
-        nav ul li a:hover {
-            background-color: #34495e;
-        }
-
-        /* Section Styling */
         section {
-            padding: 40px 15px;
-            margin: 20px 0;
-        }
-
-        .container {
-            width: 80%;
-            max-width: 1100px;
+            padding: 40px 20px;
+            max-width: 900px;
             margin: 0 auto;
         }
-
-        /* About Me Section */
-        #home {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-        }
-
-        #home img {
-            max-width: 200px;
-            border-radius: 8px;
-            display: block;
-            margin: 20px 0;
-        }
-
-        #home p {
-            font-size: 20px;
-            line-height: 1.6;
-        }
-
-        /* Project Section */
-        #projects {
-            background-color: #ecf0f1;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        #projects ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        #projects ul li {
-            margin-bottom: 10px;
-        }
-
-        #projects ul li a {
-            color: #2c3e50;
-            font-size: 20px;
-            text-decoration: none;
-            padding: 5px;
-            transition: color 0.3s ease;
-        }
-
-        #projects ul li a:hover {
-            color: #3498db;
-        }
-
-        /* Resume Section */
-        #resume {
-            background-color: #fff;
+        .container {
+            background-color: white;
             padding: 20px;
             border-radius: 8px;
-            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
-        #resume .btn {
-            background-color: #3498db;
+        h1, h2 {
+            color: #333;
+        }
+        h2 {
+            font-size: 1.8em;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        .btn {
+            background-color: #333;
             color: white;
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 18px;
-            transition: background-color 0.3s ease;
+            font-weight: bold;
         }
-
-        #resume .btn:hover {
-            background-color: #2980b9;
+        .btn:hover {
+            background-color: #555;
         }
-
-        /* Contact Section */
-        #contact {
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        form {
+            display: grid;
+            gap: 15px;
         }
-
-        #contact label {
-            font-size: 20px;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        #contact input, #contact textarea {
-            width: 100%;
+        input, textarea {
             padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 5px;
+            font-size: 1em;
+            width: 100%;
             border: 1px solid #ccc;
-            font-size: 18px;
+            border-radius: 5px;
         }
-
-        #contact button {
-            background-color: #3498db;
+        #chatbot-button {
+            background-color: #333;
             color: white;
             padding: 10px 20px;
             border: none;
-            border-radius: 5px;
-            font-size: 18px;
             cursor: pointer;
-        }
-
-        #contact button:hover {
-            background-color: #2980b9;
-        }
-
-        /* Chatbot Button Styling */
-        #chatbot-button {
-            background-color: #2c3e50;
-            color: white;
-            padding: 12px 30px;
+            font-weight: bold;
             border-radius: 5px;
-            font-size: 20px;
-            border: none;
-            cursor: pointer;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 100;
         }
-
         #chatbot-button:hover {
-            background-color: #34495e;
+            background-color: #555;
         }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #2c3e50;
-            color: white;
-            margin-top: 40px;
-        }
-
     </style>
 </head>
 <body>
@@ -217,7 +96,7 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="resume.html">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="chatbot.html" class="chatbot-link">Chatbot</a></li>
+                <li><a href="chatbot.html" class="chatbot-link">Chatbot</a></li> <!-- Chatbot Link -->
             </ul>
         </nav>
     </header>
@@ -226,8 +105,6 @@
         <div class="container">
             <h2>About Me</h2>
             <p>Hi, I'm <strong>Jabari Jones</strong>, a Computer Technology Engineering student passionate about <strong>cybersecurity, Linux, and software development.</strong></p>
-            <p><strong>Email:</strong> <a href="mailto:Jabarinj12@icloud.com">Jabarinj12@icloud.com</a></p>
-            <p><strong>Phone:</strong> <a href="tel:+13014040100">301-404-0100</a></p>
             <p><strong>Skills:</strong> Snort, Python, Kali Linux, Network Security, Machine Learning in Cybersecurity</p>
             <p><strong>Education:</strong> Currently pursuing a CTEC degree</p>
             <img src="qr_code.png" alt="QR Code to Portfolio">
@@ -254,6 +131,8 @@
     <section id="contact">
         <div class="container">
             <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:Jabarinj12@icloud.com">Jabarinj12@icloud.com</a></p>
+            <p>Phone: 301-404-0100</p>
             <form id="contact-form">
                 <label for="name">Name:</label>
                 <input type="text" id="name" required>
@@ -266,11 +145,7 @@
         </div>
     </section>
     
-    <button id="chatbot-button">Chat with My Resume</button>
-
-    <footer>
-        <p>&copy; 2025 Jabari Jones. All Rights Reserved.</p>
-    </footer>
+    <button id="chatbot-button">Chat with My Resume</button> <!-- Chatbot Button -->
 
     <script src="script.js"></script>
 </body>
