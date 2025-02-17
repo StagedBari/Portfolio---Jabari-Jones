@@ -3,30 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat with Jabari's Resume</title>
+    <title>Chatbot</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/botui/build/botui.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/botui/build/botui-theme-default.min.css">
-    <link rel="stylesheet" href="styles.css"> <!-- Include your main styles here -->
-</head>
-<body>
-    <header>
-        <h1>Chat with Jabari's Resume</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="chatbot">
-        <div class="container">
-            <div id="botui-app"></div> <!-- This is where the chatbot will appear -->
-        </div>
-    </section>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/botui/build/botui-theme-default.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/botui/build/botui.min.js"></script>
-    <script src="chatbot.js"></script> <!-- Link to your chatbot JS file -->
+</head>
+<body>
+    <div id="app">
+        <bot-ui></bot-ui>
+    </div>
+
+    <script>
+        var botui = new BotUI('app');
+
+        botui.message.add({
+            content: 'Hi, I am your chatbot! How can I assist you today?'
+        }).then(function() {
+            return botui.action.text({
+                action: {
+                    placeholder: 'Type a message'
+                }
+            });
+        }).then(function(res) {
+            console.log(res.text);  // Log user input, can be used for further actions
+            botui.message.add({
+                content: 'You said: ' + res.text
+            });
+        });
+    </script>
 </body>
 </html>
