@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat with Jabari's Resume</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/botui/build/botui.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/botui/build/botui-theme-default.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Include your main styles here -->
 </head>
 <body>
     <header>
@@ -19,12 +21,12 @@
 
     <section id="chatbot">
         <div class="container">
-            <p>Welcome! You can ask me anything about Jabari's resume or portfolio.</p>
-            <!-- Placeholder for chatbot interface -->
-            <div id="chatbox"></div>
+            <div id="botui-app"></div> <!-- This is where the chatbot will appear -->
         </div>
     </section>
 
-    <script src="chatbot.js"></script> <!-- Link to your chatbot script -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/botui/build/botui.min.js"></script>
+    <script src="chatbot.js"></script> <!-- Link to your chatbot JS file -->
 </body>
 </html>
